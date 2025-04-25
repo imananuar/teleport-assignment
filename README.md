@@ -3,14 +3,15 @@
 Java version: 21
 Build Tool: Maven
 
-Configure application.properties:
+Renaming application.properties.template to application.properties.
 
+Configure these:
 > spring.application.name=teleport  
 server.port=8081  
 spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
 
-- `mvn clean package -DskipTest`
-- `java -jar teleport-0.0.1-SNAPSHOT.jar`
+- `mvn clean package -DskipTests`
+- `java -jar target/teleport-0.0.1-SNAPSHOT.jar`
 
 Apps will run on http://localhost:8081
 
